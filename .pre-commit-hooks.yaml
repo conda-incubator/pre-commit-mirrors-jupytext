@@ -1,0 +1,7 @@
+- id: jupytext-conda
+  name: jupytext-conda
+  description: Jupyter notebooks as Markdown documents, Julia, Python or R scripts
+  entry: jupytext
+  language: conda
+  require_serial: true
+  types: [jupyter]
