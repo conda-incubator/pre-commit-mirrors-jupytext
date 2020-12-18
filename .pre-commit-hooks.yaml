@@ -4,3 +4,5 @@
   entry: jupytext
   language: conda
   types: [jupyter]
+  args:
+    - --to=py:percent
