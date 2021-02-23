@@ -1,4 +1,4 @@
 channels:
   - conda-forge
 dependencies:
-  - jupytext=1.8.2
+  - jupytext=1.9.1
