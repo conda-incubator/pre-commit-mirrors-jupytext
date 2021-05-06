@@ -14,8 +14,8 @@ Add this to your `.pre-commit-config.yaml`:
   rev: ''  # The git sha / tag you want to point to
   hooks:
     - id: jupytext-conda
-    - args:
-      - --to=py:percent
+      args:
+        - --to=py:percent
 ```
 `args` is optional and allows passing further parameters to `jupytext`.
 By default only `--to=py:percent` is passed which converts all Jupyter notebooks to Python 
