@@ -16,6 +16,7 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
       - name: Set up Conda env
-        uses: mamba-org/provision-with-micromamba@268cc19728703111bda67eb6e7328258ff6eb8b6
+        uses: mamba-org/setup-micromamba@63849fa5f38bd7edfb2c4b518206ea9eee3502d1
         with:
+          environment-file: environment.yml
           environment-name: test-env
