@@ -33,7 +33,7 @@ jobs:
           if [[ "$new_version" != "$old_version" ]]; then
             sed -i "s/$old_version/$new_version/g" environment.yml
             echo "pkgname=$pkgname" >> "$GITHUB_OUTPUT"
-            echo "new_version=$new_version" >> "$GITHUB_OUTPUT"
+            echo "new-version=$new_version" >> "$GITHUB_OUTPUT"
           fi
       - uses: peter-evans/create-pull-request@0dfc93c1049996241252d9dc45a270b7c12dec6b
         if: steps.versions.outputs.pkgname
