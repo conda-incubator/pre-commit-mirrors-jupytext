@@ -15,11 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
       - name: Set up Conda env
-        uses: mamba-org/setup-micromamba@63849fa5f38bd7edfb2c4b518206ea9eee3502d1
+        uses: mamba-org/setup-micromamba@2b72821d5ad7f6da3c003a3684ce341bf187b46f
         with:
           environment-file: environment.yml
           environment-name: check-env
@@ -35,7 +35,7 @@ jobs:
             echo "pkgname=$pkgname" >> "$GITHUB_OUTPUT"
             echo "new-version=$new_version" >> "$GITHUB_OUTPUT"
           fi
-      - uses: peter-evans/create-pull-request@0dfc93c1049996241252d9dc45a270b7c12dec6b
+      - uses: peter-evans/create-pull-request@6d9c0cdf5825c01278b6e63a0788434e6b3c5e27
         if: steps.versions.outputs.pkgname
         with:
           commit-message: "Update ${{ steps.versions.outputs.pkgname }} to ${{ steps.versions.outputs.new-version }}"
