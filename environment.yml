@@ -2,4 +2,4 @@ channels:
   - conda-forge
   - nodefaults
 dependencies:
-  - jupytext=1.17.2
+  - jupytext=1.17.3
